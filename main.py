@@ -7,7 +7,7 @@ model = GPT2LMHeadModel.from_pretrained("gpt2")
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
 for name, param in model.named_parameters():
-    print(name, tuple(param.shape))
+    print(name, tuple(param.shape)) 
 
     values = param.detach().cpu().numpy().flatten()
 
